@@ -144,11 +144,12 @@ strong {
 }
 
 .services-list {
+  padding-left: 0;
+
   font-family: trade-gothic-next-condensed, sans-serif;
   font-style: normal;
   font-weight: 400;
 
-  padding-left: 0;
-  list-style: none;
   text-transform: uppercase;
+  list-style: none;
 }
