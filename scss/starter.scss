@@ -105,7 +105,6 @@ $plum: #721051;
 //
 
 
-
 body {
   padding: 0;
   @extend .tg-next-normal;
@@ -166,11 +165,11 @@ strong {
 }
 
 .footer-list {
-  padding-left: 0;
   display: flex;
+  padding-left: 0;
   width: 80%;
-  list-style: none;
   justify-content: space-between;
+  list-style: none;
 }
 
 .footer-list a {
