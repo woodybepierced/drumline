@@ -34,6 +34,14 @@ $body-bg: #fff;
 $border-radius: .4rem;
 $success: #7952b3;
 
+//drumline colors
+$graphite: #545454;
+$white: $body-bg;
+$forest: #015B0A;
+$burgundy: #780000;
+$lichen: #125649;
+$plum: #721051;
+
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
 @import "bootstrap/scss/mixins"; // Required
@@ -81,23 +89,18 @@ $success: #7952b3;
 @import "icon-list";
 
 body {
-  padding: 3rem 1.5rem;
+  padding: 0;
 
   font-family: trade-gothic-next, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  font-family: trade-gothic-next, sans-serif;
+h1,h2,h3,h4,h5,h6,strong {
+  font-family: trade-gothic-next-condensed, sans-serif;
   font-style: normal;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 // Style Bootstrap icons
@@ -106,5 +109,30 @@ strong {
 }
 
 .drumline-logo {
-  max-width: 100px;
+  max-width: 200px;
+}
+
+.graphite {
+  background-color: $graphite;
+  color: $white;
+}
+
+.forest {
+  background-color: $forest;
+  color: $white;
+}
+
+.burgundy {
+  background-color: $burgundy;
+  color: $white;
+}
+
+.lichen {
+  background-color: $lichen;
+  color: $white;
+}
+
+.plum {
+  background-color: $plum;
+  color: $white;
 }
