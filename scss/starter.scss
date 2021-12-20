@@ -34,14 +34,6 @@ $body-bg: #fff;
 $border-radius: .4rem;
 $success: #7952b3;
 
-//drumline colors
-$graphite: #545454;
-$white: $body-bg;
-$forest: #015b0a;
-$burgundy: #780000;
-$lichen: #125649;
-$plum: #721051;
-
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
 @import "bootstrap/scss/mixins"; // Required
@@ -81,6 +73,31 @@ $plum: #721051;
 @import "bootstrap/scss/utilities";
 // @import "bootstrap/scss/print";
 
+//drumline colors
+$graphite: #545454;
+$white: $body-bg;
+$forest: #015b0a;
+$burgundy: #780000;
+$lichen: #125649;
+$plum: #721051;
+
+.font-tgNext-normal {
+  font-family: trade-gothic-next, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-tgNextComp-normal {
+  font-family: trade-gothic-next-compressed, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-tgNextComp-bold {
+  font-family: trade-gothic-next-compressed, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
 
 //
 // Custom styles
@@ -90,10 +107,7 @@ $plum: #721051;
 
 body {
   padding: 0;
-
-  font-family: trade-gothic-next, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  @extend .font-tgNext-normal;
 }
 
 h1,
@@ -103,9 +117,7 @@ h4,
 h5,
 h6,
 strong {
-  font-family: trade-gothic-next-condensed, sans-serif;
-  font-style: normal;
-  font-weight: 700;
+  @extend .font-tgNextComp-bold;
   text-transform: uppercase;
 }
 
@@ -146,10 +158,23 @@ strong {
 .services-list {
   padding-left: 0;
 
-  font-family: trade-gothic-next-condensed, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  @extend .font-tgNextComp-normal;
 
   text-transform: uppercase;
   list-style: none;
+}
+
+.footer-list {
+  padding-left: 0;
+  list-style: none;
+
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-list a {
+  color: $white;
+  @extend .font-tgNextComp-normal;
+  text-transform: uppercase;
 }
