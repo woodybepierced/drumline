@@ -37,7 +37,7 @@ $success: #7952b3;
 //drumline colors
 $graphite: #545454;
 $white: $body-bg;
-$forest: #015B0A;
+$forest: #015B0a;
 $burgundy: #780000;
 $lichen: #125649;
 $plum: #721051;
@@ -96,7 +96,13 @@ body {
   font-weight: 400;
 }
 
-h1,h2,h3,h4,h5,h6,strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-family: trade-gothic-next-condensed, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -113,26 +119,26 @@ h1,h2,h3,h4,h5,h6,strong {
 }
 
 .graphite {
-  background-color: $graphite;
   color: $white;
+  background-color: $graphite;
 }
 
 .forest {
-  background-color: $forest;
   color: $white;
+  background-color: $forest;
 }
 
 .burgundy {
-  background-color: $burgundy;
   color: $white;
+  background-color: $burgundy;
 }
 
 .lichen {
-  background-color: $lichen;
   color: $white;
+  background-color: $lichen;
 }
 
 .plum {
-  background-color: $plum;
   color: $white;
+  background-color: $plum;
 }
