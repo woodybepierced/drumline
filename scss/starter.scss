@@ -142,3 +142,13 @@ strong {
   color: $white;
   background-color: $plum;
 }
+
+.services-list {
+  font-family: trade-gothic-next-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  padding-left: 0;
+  list-style: none;
+  text-transform: uppercase;
+}
