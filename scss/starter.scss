@@ -77,10 +77,17 @@ $success: #7952b3;
 //drumline colors
 $graphite: #545454;
 $white: $body-bg;
-$forest: #015b0a;
 $burgundy: #780000;
-$lichen: #125649;
 $plum: #721051;
+
+$forest: #015b0a;
+$endive: #C1E533;
+$lime: #75E133;
+
+$lichen: #125649;
+$seafoam: #33DF9F;
+$peppermint: #26ED6D;
+
 
 .tg-next-normal {
   font-family: trade-gothic-next, sans-serif;
@@ -108,6 +115,13 @@ $plum: #721051;
 body {
   padding: 0;
   @extend .tg-next-normal;
+  font-size: 22px;
+  line-height: 26px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 
 h1,
@@ -121,9 +135,26 @@ strong {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 56px;
+  letter-spacing: 2.1px;
+  line-height: 1;
+  @include media-breakpoint-up(md) {
+    font-size: 70px;
+  }
+}
+
 // Style Bootstrap icons
 .bi {
   fill: currentColor;
+}
+
+section {
+  padding-top: 60px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 150px;
+  }
 }
 
 .drumline-logo {
@@ -155,25 +186,174 @@ strong {
   background-color: $plum;
 }
 
+.circles {
+  display: flex;
+  padding-top: 70px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 120px;
+  }
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 50%; //for now
+}
+
+.intro-content {
+  padding-top: 53px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 70px;
+
+    h2 {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+.barchart {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    background-color: $white;
+    display: block;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 15px;
+
+    &:nth-child(2),
+    &:nth-child(2n+3) {
+      background-color: $endive;
+    }
+    &:nth-child(3n+3) {
+      background-color: $lime;
+    }
+  }
+}
+
+.row {
+  .content {
+    h2 {
+      margin-bottom: 45px;
+    }
+    @include media-breakpoint-up(md) {
+      padding-bottom: 200px;
+      
+      h2 {
+        margin-bottom: 64px;
+      }
+    }
+  }
+}
+
+.letter-grid {
+  color: #FF353A;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-items: center;
+  font-size: 45px;
+  line-height: 45px;
+
+  @extend .tg-next-comp-bold;
+  @include media-breakpoint-up(md) {
+    font-size: 50px;
+    line-height: 84px;
+  }
+}
+
+.graph {
+  display: flex;
+  span {
+    background-color: $white;
+    display: block;
+    width: 25px;
+    height: 40px;
+    margin-right: 15px;
+
+    &:nth-child(2),
+    &:nth-child(2n+3) {
+      background-color: $seafoam;
+    }
+    &:nth-child(3n+3) {
+      background-color: $peppermint;
+    }
+  }
+}
+
 .services-list {
+  font-size: 26px;
+  letter-spacing: 0.52px;
+  line-height: 27px;
   padding-left: 0;
+  padding-top: 25px;
 
   @extend .tg-next-comp-normal;
 
   text-transform: uppercase;
   list-style: none;
+
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+    line-height: 31px;
+    padding-top: 40px;
+  }
+}
+
+footer {
+  padding-top: 70px;
+  padding-bottom: 100px;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+  .lead {
+    max-width: 650px;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
+  h3 {
+    margin-bottom: 0;
+  }
 }
 
 .footer-list {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
+  margin-bottom: 0;
   padding-left: 0;
+  padding-top: 20px;
   list-style: none;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 120px;
+  }
 }
 
 .footer-list a {
   color: $white;
+  font-size: 26px;
+  letter-spacing: 0.51px;
+  line-height: 39px;
   @extend .tg-next-comp-normal;
   text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+    line-height: 46px;
+  }
 }
