@@ -81,12 +81,12 @@ $burgundy: #780000;
 $plum: #721051;
 
 $forest: #015b0a;
-$endive: #C1E533;
-$lime: #75E133;
+$endive: #c1e533;
+$lime: #75e133;
 
 $lichen: #125649;
-$seafoam: #33DF9F;
-$peppermint: #26ED6D;
+$seafoam: #33df9f;
+$peppermint: #26ed6d;
 
 
 .tg-next-normal {
@@ -137,8 +137,9 @@ strong {
 
 h2 {
   font-size: 56px;
-  letter-spacing: 2.1px;
   line-height: 1;
+  letter-spacing: 2.1px;
+  
   @include media-breakpoint-up(md) {
     font-size: 70px;
   }
@@ -223,8 +224,8 @@ section {
   flex-direction: column;
 
   span {
-    background-color: $white;
     display: block;
+    background-color: $white;
     width: 100%;
     height: 25px;
     margin-bottom: 15px;
@@ -246,7 +247,6 @@ section {
     }
     @include media-breakpoint-up(md) {
       padding-bottom: 200px;
-      
       h2 {
         margin-bottom: 64px;
       }
@@ -255,8 +255,8 @@ section {
 }
 
 .letter-grid {
-  color: #FF353A;
   display: grid;
+  color: #ff353a;
   grid-template-columns: repeat(10, 1fr);
   justify-items: center;
   font-size: 45px;
@@ -272,8 +272,8 @@ section {
 .graph {
   display: flex;
   span {
-    background-color: $white;
     display: block;
+    background-color: $white;
     width: 25px;
     height: 40px;
     margin-right: 15px;
@@ -290,11 +290,11 @@ section {
 
 .services-list {
   font-size: 26px;
-  letter-spacing: 0.52px;
-  line-height: 27px;
-  padding-left: 0;
   padding-top: 25px;
-
+  padding-left: 0;
+  line-height: 27px;
+  letter-spacing: .52px;
+  
   @extend .tg-next-comp-normal;
 
   text-transform: uppercase;
@@ -320,11 +320,10 @@ footer {
   }
 }
 
-.footer__logo {
+.footer--logo {
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
-  
+  justify-content: flex-end;  
   h3 {
     margin-bottom: 0;
   }
@@ -334,9 +333,9 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin-bottom: 0;
-  padding-left: 0;
   padding-top: 20px;
+  padding-left: 0;
+  margin-bottom: 0;
   list-style: none;
 
   @include media-breakpoint-up(md) {
@@ -345,10 +344,10 @@ footer {
 }
 
 .footer-list a {
-  color: $white;
   font-size: 26px;
-  letter-spacing: 0.51px;
+  color: $white;
   line-height: 39px;
+  letter-spacing: .51px;
   @extend .tg-next-comp-normal;
   text-transform: uppercase;
 
