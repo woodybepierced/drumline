@@ -318,14 +318,40 @@ section {
   }
 }
 
+.digital-analytics {
+  position: relative;
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 200px;
+  }
+}
+
 .graph {
-  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-gap: 5px;
+  align-items: end;
+  --my-height: 40px;
+
+  @include media-breakpoint-up(lg) {
+    grid-gap: 12px;
+  }
+
   span {
     display: block;
-    width: 25px;
     height: 40px;
-    margin-right: 15px;
+    height: var(--my-height);
     background-color: $white;
+    
+    //once animation is needed/added
+    transition: height .5s ease;
 
     &:nth-child(2),
     &:nth-child(2n+3) {
@@ -356,6 +382,7 @@ section {
 
 .crm-loyalty {
   position: relative;
+  overflow: hidden;
 }
 
 .venn-diagram {
@@ -364,13 +391,18 @@ section {
 
   @include media-breakpoint-up(lg) {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 38%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10vw;
+    width: 400px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 100px 1fr;
   }
+  
+  @include media-breakpoint-up(xl) {
+    width: 500px;
+  }
+
   span {
     grid-row: 1/2;
     background: rgba(0, 5, 10, .7);
