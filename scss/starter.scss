@@ -390,8 +390,8 @@ section {
     &::before {
       display: inline-block;
       width: 1px;
-      content: "";
       height: 0;
+      content: "";
       padding-bottom: 100%;
     }
 
