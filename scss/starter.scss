@@ -295,8 +295,8 @@ section {
 }
 
 .break-out {
-  width: 100vw;
   position: relative;
+  width: 100vw;
   left: calc(-1 * (100vw - 100%) / 2);
 }
 
@@ -367,7 +367,7 @@ footer {
 .footer--content {
   padding-top: 70px;
   padding-bottom: 60px;
-  
+
   @include media-breakpoint-up(lg) {
     padding-top: 120px;
     padding-bottom: 60px;
@@ -381,11 +381,11 @@ footer {
 
   h3 {
     display: flex;
-    height: calc(100% + 60px);
-    justify-content: flex-end;
     align-items: flex-end;
-    letter-spacing: 1px;
+    justify-content: flex-end;
+    height: calc(100% + 60px);
     padding-bottom: 60px;
+    letter-spacing: 1px;
     margin-bottom: 0;
 
     @include media-breakpoint-up(lg) {
@@ -394,15 +394,15 @@ footer {
 
     span {
       display: flex;
-      height: 100%;
-      width: 5px;
-      justify-content: center;
       align-items: flex-end;
-      background-color: $white;
-      color: rgba($white, 0);
-      margin-left: 3px;
-      margin-right: 2px;
+      justify-content: center;
+      width: 5px;
+      height: 100%;
       position: relative;
+      margin-right: 2px;
+      margin-left: 3px;
+      color: rgba($white, 0);
+      background-color: $white;
       margin-bottom: -60px;
 
       @include media-breakpoint-up(lg) {
