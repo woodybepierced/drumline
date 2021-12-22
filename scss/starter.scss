@@ -296,8 +296,8 @@ section {
 
 .break-out {
   position: relative;
-  width: 100vw;
   left: calc(-1 * (100vw - 100%) / 2);
+  width: 100vw;
 }
 
 .letter-grid {
@@ -385,8 +385,8 @@ footer {
     justify-content: flex-end;
     height: calc(100% + 60px);
     padding-bottom: 60px;
-    letter-spacing: 1px;
     margin-bottom: 0;
+    letter-spacing: 1px;
 
     @include media-breakpoint-up(lg) {
       font-size: 60px;
@@ -397,13 +397,13 @@ footer {
       align-items: flex-end;
       justify-content: center;
       width: 5px;
-      height: 100%;
       position: relative;
+      height: 100%;
       margin-right: 2px;
+      margin-bottom: -60px;
       margin-left: 3px;
       color: rgba($white, 0);
       background-color: $white;
-      margin-bottom: -60px;
 
       @include media-breakpoint-up(lg) {
         width: 8px;
