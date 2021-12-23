@@ -399,7 +399,6 @@ section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 100px 1fr;
   }
-  
   @include media-breakpoint-up(xl) {
     width: 500px;
   }
