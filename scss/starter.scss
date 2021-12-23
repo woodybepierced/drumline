@@ -394,8 +394,8 @@ section {
     position: absolute;
     top: 50%;
     left: 10vw;
-    transform: translateY(-50%);
     width: 400px;
+    transform: translateY(-50%);
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 100px 1fr;
   }
