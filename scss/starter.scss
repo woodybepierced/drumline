@@ -348,14 +348,12 @@ section {
   grid-template-rows: 1fr 50px;
   background-color: transparent;
   transform: translateY(-20px);
-  
   &::before {
     display: inline-block;
     width: 100%;
     content: "";
     background-color: $endive;
   }
-
   &::after {
     display: inline-block;
     align-self: end;
