@@ -344,7 +344,8 @@ section {
     background-color: $white;
 
     &:nth-child(2),
-    &:nth-child(2n+3) {
+    &:nth-child(2n+3),
+    &:not(.peak) {
       background-color: $endive;
     }
     &:nth-child(3n+3) {
@@ -359,7 +360,7 @@ section {
   .peak {
     display: grid;
     grid-template-rows: 1fr 50px;
-    background-color: transparent!important;
+    background-color: transparent;
     transform: translateY(-20px);
     &::before {
       display: inline-block;
@@ -388,6 +389,10 @@ section {
       }
     }
   }
+}
+
+.decision-sciences .barchart .peak {
+  background-color: transparent; //github stylelint is CRAZY
 }
 
 .row {
