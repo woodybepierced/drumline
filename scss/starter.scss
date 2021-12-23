@@ -212,7 +212,7 @@ section {
 
   @include media-breakpoint-up(lg) {
     width: 300px;
-    
+
     img {
       max-width: 300px;
     }
@@ -225,8 +225,8 @@ section {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  opacity: .5; //for now
   z-index: 1;
+  opacity: .5; //for now
 
   @include media-breakpoint-up(lg) {
     width: 300px;
@@ -234,8 +234,8 @@ section {
   }
 
   &.white {
-    opacity: 1;
     z-index: 0;
+    opacity: 1;
   }
 
   &.one {
@@ -248,7 +248,7 @@ section {
   }
   &.two {
     grid-column: 3/5;
-    @include media-breakpoint-up(lg) {}
+    // @include media-breakpoint-up(lg) {}
   }
   &.three {
     grid-column: 4/6;
