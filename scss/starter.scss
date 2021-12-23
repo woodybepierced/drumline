@@ -352,8 +352,8 @@ section {
   &::before {
     display: inline-block;
     width: 100%;
-    background-color: $endive;
     content: "";
+    background-color: $endive;
   }
 
   &::after {
@@ -361,8 +361,8 @@ section {
     align-self: end;
     width: 100%;
     padding-top: 100%;
-    background-color: $white;
     content: "";
+    background-color: $white;
     border-radius: 50%;
   }
 }
