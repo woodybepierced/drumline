@@ -164,10 +164,6 @@ section {
   }
 }
 
-.drumline-logo {
-  max-width: 200px;
-}
-
 .graphite {
   color: $white;
   background-color: $graphite;
@@ -195,10 +191,11 @@ section {
 
 .circles {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr 100px);
   padding-top: 70px;
 
   @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(10, 100px 1fr 100px);
     padding-top: 120px;
   }
 }
@@ -207,6 +204,19 @@ section {
   width: 200px;
   grid-column: 2/4;
   grid-row: 1/2;
+
+  img {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 300px;
+    
+    img {
+      max-width: 300px;
+    }
+  }
 }
 
 .circle {
@@ -215,16 +225,66 @@ section {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  opacity: 50%; //for now
+  opacity: .5; //for now
+  z-index: 1;
+
+  @include media-breakpoint-up(lg) {
+    width: 300px;
+    height: 300px;
+  }
+
+  &.white {
+    opacity: 1;
+    z-index: 0;
+  }
 
   &.one {
     grid-column: 1/3;
+    transform: translateX(-42px);
+
+    @include media-breakpoint-up(lg) {
+      transform: translateX(-115px);
+    }
   }
   &.two {
     grid-column: 3/5;
+    @include media-breakpoint-up(lg) {}
   }
   &.three {
     grid-column: 4/6;
+    @include media-breakpoint-up(lg) {
+      grid-column: 5/7;
+    }
+  }
+  &.four {
+    grid-column: 5/7;
+    @include media-breakpoint-up(lg) {
+      grid-column: 6/8;
+    }
+  }
+  &.five {
+    grid-column: 6/8;
+    @include media-breakpoint-up(lg) {
+      grid-column: 8/10;
+    }
+  }
+  &.six {
+    grid-column: 7/9;
+    @include media-breakpoint-up(lg) {
+      grid-column: 9/11;
+    }
+  }
+  &.seven {
+    grid-column: 8/10;
+    @include media-breakpoint-up(lg) {
+      grid-column: 11/13;
+    }
+  }
+  &.eight {
+    grid-column: 9/11;
+    @include media-breakpoint-up(lg) {
+      grid-column: 12/14;
+    }
   }
 }
 
@@ -251,20 +311,23 @@ section {
 }
 
 .barchart {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-gap: 15px;
+  align-items: end;
+  // display: flex;
+  // flex-direction: row;
   height: 300px;
 
   @include media-breakpoint-up(lg) {
+    display: flex;
     flex-direction: column;
     height: auto;
   }
 
   span {
     display: block;
-    width: 25px;
     height: 100%;
-    margin-right: 15px;
     background-color: $white;
 
     &:nth-child(2),
