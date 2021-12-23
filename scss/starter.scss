@@ -377,7 +377,6 @@ section {
       background-color: $white;
       border-radius: 50%;
     }
-    
     @include media-breakpoint-up(lg) {
       grid-template-columns: 1fr 50px;
       grid-template-rows: unset;
