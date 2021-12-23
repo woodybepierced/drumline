@@ -377,13 +377,12 @@ section {
       background-color: $white;
       border-radius: 50%;
     }
-  
+    
     @include media-breakpoint-up(lg) {
       grid-template-columns: 1fr 50px;
       grid-template-rows: unset;
       grid-gap: 15px;
       transform: translateX(-20px);
-  
       &::after{
         align-self: end;
       }
