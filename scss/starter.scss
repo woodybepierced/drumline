@@ -327,15 +327,15 @@ section {
     right: 100px;
     bottom: 0;
     width: 40%;
-    height: auto;
     align-items: unset;
+    height: auto;
     grid-template-columns: unset;
     grid-template-rows: repeat(18, 1fr);
   }
 
   @media screen and (min-width: 1300px) {
-    width: 500px;
     right: calc((100vw - 1200px) / 2);
+    width: 500px;
   }
 
   span {
@@ -359,7 +359,7 @@ section {
   .peak {
     display: grid;
     grid-template-rows: 1fr 50px;
-    background-color: transparent !important;
+    background-color: transparent!important;
     transform: translateY(-20px);
     &::before {
       display: inline-block;
@@ -383,9 +383,6 @@ section {
       grid-gap: 15px;
       transform: translateX(-20px);
   
-      &::before {
-  
-      }
       &::after{
         align-self: end;
       }
