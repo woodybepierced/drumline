@@ -224,8 +224,8 @@ section {
 
   width: 200px;
   height: 200px;
-  border-radius: 50%;
   z-index: 1;
+  border-radius: 50%;
   opacity: .5; //for now
 
   @include media-breakpoint-up(lg) {
