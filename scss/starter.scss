@@ -201,10 +201,10 @@ section {
 }
 
 .circle--logo {
+  z-index: 2;
   width: 200px;
   grid-column: 2/4;
   grid-row: 1/2;
-  z-index: 2;
 
   img {
     width: 100%;
@@ -457,9 +457,9 @@ section {
     top: 50%;
     left: 1vw;
     width: 53%;
-    transform: translateY(-50%);
     font-size: 50px;
     line-height: 84px;
+    transform: translateY(-50%);
   }
 
   @include media-breakpoint-up(xl) {
@@ -471,8 +471,8 @@ section {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #FF3339;
     color: $white;
+    background-color: #ff3339;
   }
 }
 
