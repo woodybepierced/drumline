@@ -443,7 +443,6 @@ section {
   display: grid;
   font-size: 25px;
   line-height: 45px;
-  color: #ff353a;
   grid-template-columns: repeat(10, 1fr);
   justify-items: center;
 
@@ -467,12 +466,25 @@ section {
     width: 650px;
   }
 
+  span {
+    color: #ff353a;
+    background-color: transparent;
+  }
+
   .highlight {
     display: flex;
     justify-content: center;
     width: 100%;
-    color: $white;
-    background-color: #ff3339;
+    
+    transition: color .5s ease 0s,
+        background-color .5s ease 0s;
+
+    .data-intelligance.scrolled & {
+      color: $white;
+      background-color: #ff3339;
+      transition: color 1s ease 1s,
+        background-color 1s ease 1s;
+    }
   }
 }
 
@@ -485,6 +497,8 @@ section {
     padding-bottom: 300px;
   }
 }
+
+$dataNum: 30;
 
 .graph {
   position: absolute;
@@ -506,11 +520,10 @@ section {
   span {
     display: block;
     height: 40px;
-    height: var(--my-height);
     background-color: $white;
 
     //once animation is needed/added
-    transition: height .5s ease;
+    transition: height 1s ease 1s;
 
     &:nth-child(2),
     &:nth-child(2n+3) {
@@ -519,7 +532,25 @@ section {
     &:nth-child(3n+3) {
       background-color: $peppermint;
     }
+
+    .digital-analytics.scrolled & {
+      height: var(--my-height);
+    }
   }
+
+  // @for $i from 1 through $dataNum {
+  //   span:nth-child(#{$i}) {
+  //      -webkit-animation: showBar#{$i} 1.2s $i*.1s forwards;
+  //      -moz-animation: showBar#{$i} 1.2s $i*.1s forwards;
+  //      animation: showBar#{$i} 1.2s $i*.1s forwards;
+  //   }
+  // }
+  // @for $i from 1 through $dataNum {
+  //   @keyframes showBar#{$i} {
+  //     0%   {height: 0px;}
+  //     100%  {height: inherit;}
+  //   }
+  // }
 }
 
 .services-list {
@@ -569,10 +600,40 @@ section {
     &:first-child {
       background: rgba(255, 31, 139, .8); //rose keynote 80
       grid-column: 1/3;
+      transform: translateX(30%);
+      transition: transform 1.5s ease 1s;
+      
+      @include media-breakpoint-up(lg) {
+        transition: transform 1.5s ease .25s;
+        transform: translateY(40%);
+      }
+
+      .crm-loyalty.scrolled & {
+        transform: translateX(0);
+
+        @include media-breakpoint-up(lg) {
+          transform: translateY(0);
+        }
+      }
     }
     &:last-child {
       background: rgba(255, 8, 59, .8); //rose keynote 80
       grid-column: 2/4;
+      transform: translateX(-30%);
+      transition: transform 1.5s ease 1s;
+      
+      @include media-breakpoint-up(lg) {
+        transition: transform 1.5s ease .25s;
+        transform: translateY(-40%);
+      }
+
+      .crm-loyalty.scrolled & {
+        transform: translateX(0);
+
+        @include media-breakpoint-up(lg) {
+          transform: translateY(0);
+        }
+      }
     }
 
     &::before {
