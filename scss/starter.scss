@@ -204,6 +204,7 @@ section {
   width: 200px;
   grid-column: 2/4;
   grid-row: 1/2;
+  z-index: 2;
 
   img {
     width: 100%;
@@ -316,10 +317,20 @@ section {
 
 .barchart {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-gap: 15px;
+  grid-template-columns: repeat(13, 1fr);
+  grid-gap: 10px;
   align-items: end;
   height: 300px;
+
+  @include media-breakpoint-down(sm) {
+    span:nth-child(n+14) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(18, 1fr);
+  }
 
   @include media-breakpoint-up(lg) {
     position: absolute;
@@ -329,6 +340,7 @@ section {
     align-items: unset;
     width: 40%;
     height: auto;
+    grid-gap: 15px;
     grid-template-columns: unset;
     grid-template-rows: repeat(18, 1fr);
   }
@@ -422,18 +434,45 @@ section {
   width: 100vw;
 }
 
+.data-intelligance {
+  position: relative;
+  overflow: hidden;
+}
+
 .letter-grid {
   display: grid;
-  font-size: 45px;
+  font-size: 25px;
   line-height: 45px;
   color: #ff353a;
   grid-template-columns: repeat(10, 1fr);
   justify-items: center;
 
   @extend .tg-next-comp-bold;
+  @include media-breakpoint-up(md) {
+    font-size: 45px;
+    line-height: 70px;
+  }
   @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: 50%;
+    left: 1vw;
+    width: 53%;
+    transform: translateY(-50%);
     font-size: 50px;
     line-height: 84px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    left: calc((100vw - 1200px) / 2);
+    width: 650px;
+  }
+
+  .highlight {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #FF3339;
+    color: $white;
   }
 }
 
@@ -443,7 +482,7 @@ section {
   .content {
     position: relative;
     z-index: 1;
-    padding-bottom: 200px;
+    padding-bottom: 300px;
   }
 }
 
