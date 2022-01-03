@@ -475,15 +475,12 @@ section {
     display: flex;
     justify-content: center;
     width: 100%;
-    
-    transition: color .5s ease 0s,
-        background-color .5s ease 0s;
+    transition: color .5s ease 0s, background-color .5s ease 0s;
 
     .data-intelligance.scrolled & {
       color: $white;
       background-color: #ff3339;
-      transition: color 1s ease 1s,
-        background-color 1s ease 1s;
+      transition: color 1s ease 1s, background-color 1s ease 1s;
     }
   }
 }
@@ -497,8 +494,6 @@ section {
     padding-bottom: 300px;
   }
 }
-
-$dataNum: 30;
 
 .graph {
   position: absolute;
@@ -537,20 +532,6 @@ $dataNum: 30;
       height: var(--my-height);
     }
   }
-
-  // @for $i from 1 through $dataNum {
-  //   span:nth-child(#{$i}) {
-  //      -webkit-animation: showBar#{$i} 1.2s $i*.1s forwards;
-  //      -moz-animation: showBar#{$i} 1.2s $i*.1s forwards;
-  //      animation: showBar#{$i} 1.2s $i*.1s forwards;
-  //   }
-  // }
-  // @for $i from 1 through $dataNum {
-  //   @keyframes showBar#{$i} {
-  //     0%   {height: 0px;}
-  //     100%  {height: inherit;}
-  //   }
-  // }
 }
 
 .services-list {
@@ -619,8 +600,8 @@ $dataNum: 30;
     &:last-child {
       background: rgba(255, 8, 59, .8); //rose keynote 80
       grid-column: 2/4;
-      transform: translateX(-30%);
       transition: transform 1.5s ease 1s;
+      transform: translateX(-30%);
       
       @include media-breakpoint-up(lg) {
         transition: transform 1.5s ease .25s;
