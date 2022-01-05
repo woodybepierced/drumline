@@ -193,11 +193,9 @@ section {
   display: grid;
   grid-template-columns: repeat(20, 50px 75px);
   padding-top: 70px;
-
   @include media-breakpoint-up(md) {
     grid-template-columns: repeat(10, 50px 1fr 50px);
   }
-
   @include media-breakpoint-up(lg) {
     grid-template-columns: repeat(10, 100px 1fr 100px);
     padding-top: 120px;
@@ -218,7 +216,7 @@ section {
     display: block;
     width: 100%;
     height: 100%;
-    content: "";
+    content: '';
 
     animation: .75s ease 0s 1 circleLogo forwards;
   }
