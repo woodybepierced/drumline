@@ -322,7 +322,6 @@ section {
     @include media-breakpoint-up(lg) {
       grid-column: 5/7;
     }
-    
     @include media-breakpoint-up(lg) {
       grid-column: 5/7;
       transform: translateX(-400px); //setup for animation
