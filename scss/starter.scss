@@ -191,8 +191,12 @@ section {
 
 .circles {
   display: grid;
-  grid-template-columns: repeat(10, 1fr 100px);
+  grid-template-columns: repeat(20, 50px 75px);
   padding-top: 70px;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(10, 50px 1fr 50px);
+  }
 
   @include media-breakpoint-up(lg) {
     grid-template-columns: repeat(10, 100px 1fr 100px);
@@ -227,6 +231,19 @@ section {
   height: 200px;
   border-radius: 50%;
   opacity: .5; //for now
+  transition: transform 1s ease;
+
+  @include media-breakpoint-down(sm) {
+    &:nth-child(n+5) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+    &:nth-child(n+8) {
+      display: none;
+    }
+  }
 
   @include media-breakpoint-up(lg) {
     width: 300px;
@@ -240,50 +257,244 @@ section {
 
   &.one {
     grid-column: 1/3;
-    transform: translateX(-42px);
+    transform: translateX(50px); //setup for animation
+    animation: 1s ease 1s 1 circleOne forwards;
 
     @include media-breakpoint-up(lg) {
-      transform: translateX(-115px);
+      transform: translateX(100px); //setup for animation
     }
   }
+
+  @keyframes circleOne {
+    from {
+      transform: translateX(50px);
+    }
+  
+    to {
+      transform: translateX(-42px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleOne {
+      from {
+        transform: translateX(100px);
+      }
+    
+      to {
+        transform: translateX(-115px);
+      }
+    }
+  }
+
   &.two {
     grid-column: 3/5;
-    // @include media-breakpoint-up(lg) {}
+    transform: translateX(-150px);
+    animation: 1s ease 1s 1 circleTwo forwards;
+    @include media-breakpoint-up(lg) {
+      transform: translateX(-200px); //setup for animation
+    }
   }
+
+  @keyframes circleTwo {
+    from {
+      transform: translateX(-150px);
+    }
+  
+    to {
+      transform: translateX(0px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleTwo {
+      from {
+        transform: translateX(-200px);
+      }
+    
+      to {
+        transform: translateX(0px);
+      }
+    }
+  }
+
   &.three {
-    grid-column: 4/6;
+    grid-column: 6/8;
+    transform: translateX(-400px); //setup for animation
+    animation: 1s ease 1s 1 circleThree forwards;
+
     @include media-breakpoint-up(lg) {
       grid-column: 5/7;
     }
+    
+    @include media-breakpoint-up(lg) {
+      grid-column: 5/7;
+      transform: translateX(-400px); //setup for animation
+    }
   }
+
+  @keyframes circleThree {
+    from {
+      transform: translateX(-400px);
+    }
+  
+    to {
+      transform: translateX(0px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleThree {
+      from {
+        transform: translateX(-400px);
+      }
+    
+      to {
+        transform: translateX(0px);
+      }
+    }
+  }
+
   &.four {
     grid-column: 5/7;
+    transform: translateX(-250px); //setup for animation
+    animation: 1s ease 1s 1 circleFour forwards;
     @include media-breakpoint-up(lg) {
       grid-column: 6/8;
+      transform: translateX(-600px); //setup for animation
     }
   }
+
+  @keyframes circleFour {
+    from {
+      transform: translateX(-250px);
+    }
+  
+    to {
+      transform: translateX(0px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleFour {
+      from {
+        transform: translateX(-600px);
+      }
+    
+      to {
+        transform: translateX(0px);
+      }
+    }
+  }
+
   &.five {
     grid-column: 6/8;
+    animation: 1s ease 1s 1 circleFive forwards;
+    @include media-breakpoint-up(md) {
+      grid-column: 8/10;
+      transform: translateX(-500px);
+    }
     @include media-breakpoint-up(lg) {
       grid-column: 8/10;
+      transform: translateX(-800px); //setup for animation
     }
   }
+
+  @keyframes circleFive {
+    from {
+      transform: translateX(-500px);
+    }
+  
+    to {
+      transform: translateX(0px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleFive {
+      from {
+        transform: translateX(-800px);
+      }
+    
+      to {
+        transform: translateX(0px);
+      }
+    }
+  }
+
   &.six {
     grid-column: 7/9;
-    @include media-breakpoint-up(lg) {
+    animation: 1s ease 1s 1 circleSix forwards;
+    @include media-breakpoint-up(md) {
       grid-column: 9/11;
+      transform: translateX(-650px);
+    }
+    @include media-breakpoint-up(lg) {
+      transform: translateX(-1000px); //setup for animation
     }
   }
+
+  @keyframes circleSix {
+    from {
+      transform: translateX(-650px);
+    }
+  
+    to {
+      transform: translateX(0px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleSix {
+      from {
+        transform: translateX(-1000px);
+      }
+    
+      to {
+        transform: translateX(0px);
+      }
+    }
+  }
+
   &.seven {
     grid-column: 8/10;
+    animation: 1s ease 1s 1 circleSeven forwards;
     @include media-breakpoint-up(lg) {
       grid-column: 11/13;
+      transform: translateX(-1200px); //setup for animation
     }
   }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleSeven {
+      from {
+        transform: translateX(-1200px);
+      }
+    
+      to {
+        transform: translateX(0px);
+      }
+    }
+  }
+
   &.eight {
     grid-column: 9/11;
+    animation: 1s ease 1s 1 circleEight forwards;
     @include media-breakpoint-up(lg) {
       grid-column: 12/14;
+      transform: translateX(-1400px); //setup for animation
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @keyframes circleEight {
+      from {
+        transform: translateX(-1400px);
+      }
+    
+      to {
+        transform: translateX(0px);
+      }
     }
   }
 }
