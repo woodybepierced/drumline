@@ -155,7 +155,7 @@ h2 {
 header {
   overflow: hidden;
   color: $white;
-  background-color: #05495E;
+  background-color: #05495e;
 }
 
 section {
@@ -539,7 +539,7 @@ section {
     @include media-breakpoint-up(lg) {
       grid-column: 20/24;
       opacity: 0;
-      transform: translateX(calc((-100vw / 20) * 18) ); //setup for animation
+      transform: translateX(calc((-100vw / 20) * 18)); //setup for animation
     }
   }
 
