@@ -312,7 +312,7 @@ section {
     @include media-breakpoint-up(lg) {
       transform: translateX(calc((100vw / 24) * 1)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 1)); //setup for animation
     }
   }
@@ -341,7 +341,7 @@ section {
     }
   }
 
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleOne {
       0% {
         opacity: 0;
@@ -366,7 +366,7 @@ section {
       grid-column: 5/9;
       transform: translateX(calc((-100vw / 24) * 3)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 3)); //setup for animation
     }
   }
@@ -395,7 +395,7 @@ section {
     }
   }
 
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleTwo {
       0% {
         opacity: 0;
@@ -421,7 +421,7 @@ section {
       grid-column: 8/12;
       transform: translateX(calc((-100vw / 24) * 6)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 6)); //setup for animation
     }
   }
@@ -463,7 +463,7 @@ section {
     }
   }
 
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleThree {
       0% {
         opacity: 0;
@@ -489,7 +489,7 @@ section {
       grid-column: 11/15;
       transform: translateX(calc((-100vw / 24) * 9)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 9)); //setup for animation
     }
   }
@@ -531,7 +531,7 @@ section {
     }
   }
 
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleFour {
       0% {
         opacity: 0;
@@ -556,7 +556,7 @@ section {
       grid-column: 14/18;
       transform: translateX(calc((-100vw / 24) * 12)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 12)); //setup for animation
     }
   }
@@ -585,7 +585,7 @@ section {
     }
   }
 
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleFive {
       0% {
         opacity: 0;
@@ -610,7 +610,7 @@ section {
       grid-column: 17/21;
       transform: translateX(calc((-100vw / 24) * 15)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 15)); //setup for animation
     }
   }
@@ -639,7 +639,7 @@ section {
     }
   }
 
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleSix {
       0% {
         opacity: 0;
@@ -664,7 +664,7 @@ section {
       grid-column: 20/24;
       transform: translateX(calc((-100vw / 24) * 18)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 18)); //setup for animation
     }
   }
@@ -694,7 +694,7 @@ section {
       }
     }
   }
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleSeven {
       0% {
         opacity: 0;
@@ -715,7 +715,7 @@ section {
       opacity: 0;
       transform: translateX(calc((-100vw / 24) * 21)); //setup for animation
     }
-    @media screen and (min-width:1380px){
+    @media screen and (min-width: 1380px){
       transform: translateX(calc((-1400px / 24) * 21)); //setup for animation
     }
   }
@@ -732,7 +732,7 @@ section {
       }
     }
   }
-  @media screen and (min-width:1380px){
+  @media screen and (min-width: 1380px){
     @keyframes circleEight {
       0% {
         opacity: 0;
