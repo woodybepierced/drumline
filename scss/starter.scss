@@ -220,7 +220,7 @@ section {
     grid-template-columns: repeat(15, minmax(0, 1fr));
   }
   @include media-breakpoint-up(lg) {
-    grid-template-columns: repeat(20, minmax(0, 1fr));
+    grid-template-columns: repeat(24, minmax(0, 1fr));
     padding-top: 120px;
   }
 }
@@ -310,7 +310,10 @@ section {
     animation: 1.5s ease 0s 1 circleOne forwards;
 
     @include media-breakpoint-up(lg) {
-      transform: translateX(calc((100vw / 20) * 1)); //setup for animation
+      transform: translateX(calc((100vw / 24) * 1)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 1)); //setup for animation
     }
   }
 
@@ -329,7 +332,20 @@ section {
     @keyframes circleOne {
       0% {
         opacity: 0;
-        transform: translateX(calc((100vw / 20) * 1));
+        transform: translateX(calc((100vw / 24) * 1));
+      }
+      100% {
+        opacity: .8;
+        transform: translateX(-115px);
+      }
+    }
+  }
+
+  @media screen and (min-width:1380px){
+    @keyframes circleOne {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((1400px / 24) * 1));
       }
       100% {
         opacity: .8;
@@ -348,7 +364,10 @@ section {
     }
     @include media-breakpoint-up(lg) {
       grid-column: 5/9;
-      transform: translateX(calc((-100vw / 20) * 3)); //setup for animation
+      transform: translateX(calc((-100vw / 24) * 3)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 3)); //setup for animation
     }
   }
 
@@ -367,7 +386,20 @@ section {
     @keyframes circleTwo {
       0% {
         opacity: 0;
-        transform: translateX(calc((-100vw / 20) * 3));
+        transform: translateX(calc((-100vw / 24) * 3));
+      }
+      100% {
+        opacity: .8;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media screen and (min-width:1380px){
+    @keyframes circleTwo {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((-1400px / 24) * 3));
       }
       100% {
         opacity: .8;
@@ -386,8 +418,11 @@ section {
       transform: translateX(calc((-100vw / 15) * 4));
     }
     @include media-breakpoint-up(lg) {
-      grid-column: 7/11;
-      transform: translateX(calc((-100vw / 20) * 5)); //setup for animation
+      grid-column: 8/12;
+      transform: translateX(calc((-100vw / 24) * 6)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 6)); //setup for animation
     }
   }
 
@@ -419,7 +454,20 @@ section {
     @keyframes circleThree {
       0% {
         opacity: 0;
-        transform: translateX(calc((-100vw / 20) * 5));
+        transform: translateX(calc((-100vw / 24) * 6));
+      }
+      100% {
+        opacity: .8;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media screen and (min-width:1380px){
+    @keyframes circleThree {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((-1400px / 24) * 6));
       }
       100% {
         opacity: .8;
@@ -438,8 +486,11 @@ section {
       transform: translateX(calc((-100vw / 15) * 6)); //setup for animation
     }
     @include media-breakpoint-up(lg) {
-      grid-column: 10/14;
-      transform: translateX(calc((-100vw / 20) * 8)); //setup for animation
+      grid-column: 11/15;
+      transform: translateX(calc((-100vw / 24) * 9)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 9)); //setup for animation
     }
   }
 
@@ -471,7 +522,20 @@ section {
     @keyframes circleFour {
       0% {
         opacity: 0;
-        transform: translateX(calc((-100vw / 20) * 8));
+        transform: translateX(calc((-100vw / 24) * 9));
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media screen and (min-width:1380px){
+    @keyframes circleFour {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((-1400px / 24) * 9));
       }
       100% {
         opacity: 1;
@@ -489,8 +553,11 @@ section {
       transform: translateX(calc((-100vw / 15) * 8));
     }
     @include media-breakpoint-up(lg) {
-      grid-column: 13/17;
-      transform: translateX(calc((-100vw / 20) * 11)); //setup for animation
+      grid-column: 14/18;
+      transform: translateX(calc((-100vw / 24) * 12)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 12)); //setup for animation
     }
   }
 
@@ -509,7 +576,20 @@ section {
     @keyframes circleFive {
       0% {
         opacity: 0;
-        transform: translateX(calc((-100vw / 20) * 11));
+        transform: translateX(calc((-100vw / 24) * 12));
+      }
+      100% {
+        opacity: .8;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media screen and (min-width:1380px){
+    @keyframes circleFive {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((-1400px / 24) * 12));
       }
       100% {
         opacity: .8;
@@ -527,8 +607,11 @@ section {
       transform: translateX(calc((-100vw / 15) * 10));
     }
     @include media-breakpoint-up(lg) {
-      grid-column: 16/20;
-      transform: translateX(calc((-100vw / 20) * 14)); //setup for animation
+      grid-column: 17/21;
+      transform: translateX(calc((-100vw / 24) * 15)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 15)); //setup for animation
     }
   }
 
@@ -547,7 +630,20 @@ section {
     @keyframes circleSix {
       0% {
         opacity: 0;
-        transform: translateX(calc((-100vw / 20) * 14));
+        transform: translateX(calc((-100vw / 24) * 15));
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media screen and (min-width:1380px){
+    @keyframes circleSix {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((-1400px / 24) * 15));
       }
       100% {
         opacity: 1;
@@ -565,8 +661,11 @@ section {
       transform: translateX(calc((-100vw / 15) * 12));
     }
     @include media-breakpoint-up(lg) {
-      grid-column: 18/22;
-      transform: translateX(calc((-100vw / 20) * 16)); //setup for animation
+      grid-column: 20/24;
+      transform: translateX(calc((-100vw / 24) * 18)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 18)); //setup for animation
     }
   }
 
@@ -587,7 +686,19 @@ section {
     @keyframes circleSeven {
       0% {
         opacity: 0;
-        transform: translateX(calc((-100vw / 20) * 16));
+        transform: translateX(calc((-100vw / 24) * 18));
+      }
+      100% {
+        opacity: .8;
+        transform: translateX(0);
+      }
+    }
+  }
+  @media screen and (min-width:1380px){
+    @keyframes circleSeven {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((-1400px / 24) * 18)); //setup for animation
       }
       100% {
         opacity: .8;
@@ -600,9 +711,12 @@ section {
     grid-column: 9/13;
     animation: 1.8s ease .25s 1 circleEight forwards;
     @include media-breakpoint-up(lg) {
-      grid-column: 20/24;
+      grid-column: 23/27;
       opacity: 0;
-      transform: translateX(calc((-100vw / 20) * 18)); //setup for animation
+      transform: translateX(calc((-100vw / 24) * 21)); //setup for animation
+    }
+    @media screen and (min-width:1380px){
+      transform: translateX(calc((-1400px / 24) * 21)); //setup for animation
     }
   }
 
@@ -610,7 +724,19 @@ section {
     @keyframes circleEight {
       0% {
         opacity: 0;
-        transform: translateX(calc((-100vw / 20) * 18));
+        transform: translateX(calc((-100vw / 24) * 21));
+      }
+      100% {
+        opacity: .8;
+        transform: translateX(0);
+      }
+    }
+  }
+  @media screen and (min-width:1380px){
+    @keyframes circleEight {
+      0% {
+        opacity: 0;
+        transform: translateX(calc((-1400px / 24) * 21)); //setup for animation
       }
       100% {
         opacity: .8;
