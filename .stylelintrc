@@ -1,9 +1,7 @@
 {
   "extends": [
     "stylelint-config-twbs-bootstrap/scss"
-  ]
-}
-{
+  ],
   "rules": {
     "no-missing-end-of-source-newline": null
   }
