@@ -161,6 +161,12 @@ h2 {
   }
 }
 
+h3 {
+  p + & {
+    margin-top: 30px;
+  }
+}
+
 // Style Bootstrap icons
 .bi {
   fill: currentColor;
@@ -1196,5 +1202,44 @@ footer {
   @include media-breakpoint-up(lg) {
     font-size: 30px;
     line-height: 46px;
+  }
+}
+
+// Adding Client Logos //
+
+.our-partners {
+  text-align: center;
+  padding-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.client__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 3rem;
+  }
+}
+.client__logo {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 75px;
+
+    @include media-breakpoint-up(md) {
+      max-height: 100px;
+    }
   }
 }
