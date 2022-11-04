@@ -3,6 +3,7 @@
     "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
-    "no-missing-end-of-source-newline": null
+    "no-missing-end-of-source-newline": null,
+    "selector-type-no-unknown": null
   }
 }
