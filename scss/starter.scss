@@ -1243,10 +1243,10 @@ footer {
   img {
     width: 100%;
     height: auto;
-    max-height: 75px;
+    max-width: 75px;
 
     @include media-breakpoint-up(md) {
-      max-height: 100px;
+      max-width: 100px;
     }
   }
 }
