@@ -1223,7 +1223,7 @@ footer {
   margin-top: 2rem;
 
   @include media-breakpoint-only(md) {
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
   }
 
   @include media-breakpoint-up(lg) {
@@ -1245,13 +1245,13 @@ footer {
   margin-bottom: 20px;
 
   @include media-breakpoint-only(md) {
-    flex: 0 1 auto;  
+    flex: 0 1 auto;
   }
 
   img {
     width: 100%;
-    height: auto;
     max-width: 75px;
+    height: auto;
 
     @include media-breakpoint-up(md) {
       max-width: 100px;
