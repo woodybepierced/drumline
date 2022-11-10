@@ -1222,6 +1222,10 @@ footer {
   justify-content: center;
   margin-top: 2rem;
 
+  @include media-breakpoint-only(md) {
+    flex-wrap: nowrap;  
+  }
+
   @include media-breakpoint-up(lg) {
     margin-top: 3rem;
     
@@ -1239,6 +1243,10 @@ footer {
   padding-right: 15px;
   padding-left: 15px;
   margin-bottom: 20px;
+
+  @include media-breakpoint-only(md) {
+    flex: 0 1 auto;  
+  }
 
   img {
     width: 100%;
